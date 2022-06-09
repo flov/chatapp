@@ -18,10 +18,10 @@ export const Auth = () => {
   }
   if (user) {
     return (
-      <div>
-        <p>Signed In User: {user.email}</p>
+      <>
+        <p className='text-white'>Signed In User: {user.email}</p>
         <SignOut />
-      </div>
+      </>
     );
   }
   return <SignIn />;
