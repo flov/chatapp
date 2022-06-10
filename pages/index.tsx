@@ -13,7 +13,6 @@ const Home: NextPage = () => {
         <Auth />
       </header>
       {user && <ChatRoom />}
-      <footer></footer>
     </div>
   );
 };

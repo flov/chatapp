@@ -1,34 +1,26 @@
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { FormEvent, useState } from 'react';
+import { FormEvent, MutableRefObject, RefObject, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { db, auth } from '../firebase';
 
-export const MessageForm = () => {
+export const MessageForm = ({
+  dummyRef,
+}: {
+  dummyRef: RefObject<HTMLDivElement>;
+}) => {
   const [user] = useAuthState(auth);
   const [text, setText] = useState('');
 
-  const createMessage = async () => {
+  const submitForm = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!text) return;
     await addDoc(collection(db, 'messages'), {
       createdAt: serverTimestamp(),
       text,
       uid: user?.uid,
       photoURL: user?.photoURL,
     });
-  };
-  
-  const submitForm = (e: FormEvent) => {
-    e.preventDefault();
-    if (!text) return;
-    createMessage();
-  };
-  
-  const addMessage = async (name: string) => {
-    if (!name) return;
-    await addDoc(collection(db, 'todos'), {
-      name,
-      completed: false,
-      createdAt: serverTimestamp(),
-    });
+    dummyRef?.current?.scrollIntoView({ behavior: 'smooth' });
     setText('');
   };
 
