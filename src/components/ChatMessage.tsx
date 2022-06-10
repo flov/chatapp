@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { auth } from '../firebase';
 
 export type ChatMessageProps = {
-  text?: string;
-  uid?: string;
-  createdAt?: Timestamp;
+  text: string;
+  uid: string;
+  createdAt: Timestamp;
   photoURL: string;
 };
 

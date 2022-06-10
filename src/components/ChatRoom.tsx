@@ -18,11 +18,19 @@ export const ChatRoom = () => {
           <strong>Collection loading: {JSON.stringify(loading)}</strong>
         )}
         {value &&
-          value.docs.map((doc) => (
-            <Fragment key={doc.id}>
-              <ChatMessage {...doc.data()} />
-            </Fragment>
-          ))}
+          value.docs.map((doc) => {
+            const data = doc.data();
+            return (
+              <Fragment key={doc.id}>
+                <ChatMessage
+                  photoURL={data.photoURL}
+                  createdAt={data.createdAt}
+                  uid={data.uid}
+                  text={data.text}
+                />
+              </Fragment>
+            );
+          })}
       </div>
       <MessageForm />
     </>
