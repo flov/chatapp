@@ -11,11 +11,8 @@ const Home: NextPage = () => {
       <header className="flex flex-wrap items-center justify-between w-full p-3 bg-black realtive">
         <h1 className="text-2xl font-bold text-white">🔮 Chat App 🔮</h1>
         <Auth />
-        
       </header>
-      <div>
-        {user && <ChatRoom />}
-      </div>
+      {user && <ChatRoom />}
       <footer></footer>
     </div>
   );

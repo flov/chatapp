@@ -13,6 +13,7 @@ specifiers:
   react: 18.1.0
   react-dom: 18.1.0
   react-firebase-hooks: ^5.0.3
+  react-loader-spinner: ^5.1.5
   tailwindcss: ^3.1.0
   typescript: 4.7.3
 
@@ -22,6 +23,7 @@ dependencies:
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-firebase-hooks: 5.0.3_mg4mcf4ansnvjpuybiuvla3nuq
+  react-loader-spinner: 5.1.5_ef5jwxihqo6n7gxfmzogljlgcm
 
 devDependencies:
   '@types/node': 17.0.41
@@ -2467,6 +2469,16 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
+
+  /react-loader-spinner/5.1.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-kHSBa3pNPNzd3UGOiOsHCC33qx5bZA7IHKau+YSTVn36Jib4eBVx/TNMggudbzW5CTnRCbP5bnYU4ACAX3mA6g==}
+    peerDependencies:
+      react: ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+    dev: false
 
   /react/18.1.0:
     resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
