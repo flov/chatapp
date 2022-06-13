@@ -6,4 +6,4 @@ npm run dev
 yarn dev
 ```
 
-Deployed chat app available [https://chatapp-bh2pbojo1-flov1.vercel.app/](here) 
+Deployed chat app available [here](https://chatapp-bh2pbojo1-flov1.vercel.app/) 
